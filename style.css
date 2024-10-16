@@ -1,0 +1,307 @@
+/* Styles de base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(270deg, #f0c5e1, #f9f1fc);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #4a148c;
+}
+
+header {
+    background-color: #880e4f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f8bbd0;
+}
+
+section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #880e4f;
+}
+
+footer {
+    background-color: #4a148c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.experience-item {
+    background-color: #f8bbd0;
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animated-title {
+    font-size: 2em;
+    color: #D500F9;
+    animation: slideIn 1s ease-out;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.animated-subtitle {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #FF4081;
+    transition: color 0.3s ease;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.animated-subtitle:hover {
+    color: #D500F9;
+}
+
+.details {
+    display: none;
+    margin-left: 20px;
+    font-size: 0.95em;
+    color: #555;
+    animation: fadeIn 1s ease-in-out;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    overflow: hidden;
+}
+
+/* Section À propos */
+#about {
+    padding: 60px 20px;
+    background-color: #f9f1fc;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #800080;
+    margin-bottom: 30px;
+    animation: fadeInTitle 2s ease;
+}
+
+.about-description {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    animation: fadeInText 3s ease-in-out;
+}
+
+@keyframes fadeInTitle {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section générale */
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Boutons */
+button {
+    background-color: #800080;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #f9f1fc;
+    color: #800080;
+}
+
+/* Animation de dégradé */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.photo-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.profile-photo {
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Section références */
+#references {
+    padding: 40px;
+    background-color: #f8bbd0;
+    text-align: center;
+}
+
+#references h2 {
+    font-size: 2em;
+    color: #4a148c;
+    margin-bottom: 20px;
+}
+
+#references ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#references ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #880e4f;
+}
+
+#references ul li a {
+    color: #4a148c;
+    text-decoration: none;
+}
+
+#references ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section contact */
+#contact p {
+    font-size: 1.5em;
+}
+.diploma-container {
+    width: 700px; /* Largeur du cadre */
+    height: 600px; /* Hauteur du cadre */
+    position: relative;
+    margin: 50px auto; /* Centrer le cadre sur la page */
+    background-color: white; /* Couleur du fond du diplôme */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre pour effet de profondeur */
+    border-radius: 10px; /* Arrondir les coins du cadre */
+    overflow: hidden; /* Masquer les débordements */
+}
+
+.diploma-content {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2; /* S'assurer que le contenu est au-dessus de la bordure */
+}
+
+.diploma-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 10px solid transparent; /* Épaisseur de la bordure, sans couleur initiale */
+    box-sizing: border-box; /* Inclure les bordures dans la taille totale */
+    animation: move-border 4s linear infinite; /* Animation pour les bordures */
+}
+
+/* Animation pour le mouvement des bordures */
+@keyframes move-border {
+    0% {
+        border-color: rgb(242, 192, 255) white rgb(240, 192, 255) white; /* Couleurs initiales */
+    }
+    25% {
+        border-color: white rgb(255, 192, 250) white rgb(255, 192, 250); /* Changement de couleur */
+    }
+    50% {
+        border-color: pink white pink white; /* Rétablissement des couleurs initiales */
+    }
+    75% {
+        border-color:  white rgb(255, 192, 250) white rgb(255, 192, 250); /* Changement de couleur */
+    }
+    100% {
+        border-color: rgb(242, 192, 255) white rgb(240, 192, 255) white; /* Rétablissement des couleurs initiales */
+    }
+}
+
