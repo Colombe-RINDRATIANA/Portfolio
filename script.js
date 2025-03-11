@@ -67,17 +67,3 @@ const observerScroll = new IntersectionObserver((entries) => {
 scrollSections.forEach(section => {
   observerScroll.observe(section);
 });
-function toggleDetails(id) {
-  var details = document.getElementById(id);
-  if (details.style.display === "none" || details.style.display === "") {
-      details.style.display = "block";
-  } else {
-      details.style.display = "none";
-  }
-}
-document.addEventListener('DOMContentLoaded', () => {
-    const diplomaContainer = document.getElementById('diploma');
-    
-    // Ajouter la classe de pulsation pour l'animation
-    diplomaContainer.classList.add('pulse');
-});
